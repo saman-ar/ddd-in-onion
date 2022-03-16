@@ -4,4 +4,9 @@
     <TargetFramework>netcoreapp2.2</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Polo.Shop.CustomerContext.Resources\Polo.Shop.CustomerContext.Resources.csproj" />
+    <ProjectReference Include="..\Shoniz.Framework.Domain\Polo.Framework.Domain.csproj" />
+  </ItemGroup>
+
 </Project>
