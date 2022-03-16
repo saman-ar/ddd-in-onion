@@ -26,7 +26,13 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
         public string Password { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
-        public Address Address { get; private set; }
+        public ICollection<Address> Addresses { get; private set; }
+
+
+        public void AddAddress(Address address)
+        {
+            Addresses.Add(address);
+        }
 
         private void SetPassword(string password)
         {
@@ -59,8 +65,10 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
         {
             if (string.IsNullOrWhiteSpace(email))
                 throw new EmailRequiredException();
+
             if (!email.Contains("@"))
                 throw new CkeckEmailPatternException();
+
             Email = email;
         }
 
