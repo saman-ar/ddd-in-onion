@@ -8,6 +8,6 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate.Exceptions
 {
     public class CkeckEmailPatternException : DomainException
     {
-        public override string Message => ExceptionResource.CkeckEmailPatternException;
+        public override string Message => ExceptionResource.CheckEmailPatternException;
     }
 }

@@ -99,9 +99,9 @@ namespace Polo.Shop.CustomerContext.Resources {
         /// <summary>
         ///   Looks up a localized string similar to کدملی باید یکتا باشد.
         /// </summary>
-        public static string NationalCodeDublicationException {
+        public static string NationalCodeDublicatedException {
             get {
-                return ResourceManager.GetString("NationalCodeDublicationException", resourceCulture);
+                return ResourceManager.GetString("NationalCodeDublicatedException", resourceCulture);
             }
         }
         

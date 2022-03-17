@@ -129,7 +129,7 @@
   <data name="LastNameRequiredException" xml:space="preserve">
     <value>نام خانوادگی را وارد کنید</value>
   </data>
-  <data name="NationalCodeDublicationException" xml:space="preserve">
+  <data name="NationalCodeDublicatedException" xml:space="preserve">
     <value>کدملی باید یکتا باشد</value>
   </data>
   <data name="NationalCodeRequiredException" xml:space="preserve">

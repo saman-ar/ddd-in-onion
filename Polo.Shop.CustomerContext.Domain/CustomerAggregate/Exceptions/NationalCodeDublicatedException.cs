@@ -6,8 +6,8 @@ using System.Text;
 
 namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate.Exceptions
 {
-    public class NationalCodeDublicationException : DomainException
+    public class NationalCodeDublicatedException: DomainException
     {
-        public override string Message =>ExceptionResource.NationalCodeDublicationException;
+        public override string Message => ExceptionResource.NationalCodeDublicationException; 
     }
 }

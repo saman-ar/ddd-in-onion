@@ -1,24 +1,53 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using Polo.Framework.Core;
+using Polo.Framework.Core.Security;
+using Polo.Framework.Domain;
 using Polo.Shop.CustomerContext.Domain.CustomerAggregate.Exceptions;
+using Polo.Shop.CustomerContext.Domain.CustomerAggregate.Services;
+
 namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
 {
-    public class Customer
+    public class Customer : EntityBase
     {
         private string _userName;
         private string _password;
         private string _firstName;
         private string _lastName;
         private string _email;
+        private readonly INationalCodeDublicationChecker _nationalCodeDublicationChecker;
+        private readonly IPasswordHasher _passwordHasher;
 
-        public Customer(string userName, string email, string password, string firstName, string lastName)
+        public Customer(
+            INationalCodeDublicationChecker nationalCodeDublicationChecker,
+            IPasswordHasher passwordHasher,
+            string userName,
+            string email,
+            string password,
+            string firstName,
+            string lastName,
+            string nationalCode)
         {
+            _nationalCodeDublicationChecker = nationalCodeDublicationChecker;
+            _passwordHasher = passwordHasher;
+
             SetUserName(userName);
             SetEmail(email);
             SetFirstName(firstName);
             SetLastName(lastName);
             SetPassword(password);
+            SetNationalCode(nationalCode);
+        }
+
+        private void SetNationalCode(string nationalCode)
+        {
+            if (string.IsNullOrWhiteSpace(nationalCode))
+                throw new NationalCodeRequiredException();
+
+            if (_nationalCodeDublicationChecker.IsDublicated(nationalCode))
+                throw new NationalCodeDublicatedException();
+
+            NationalCode = nationalCode;
         }
 
         public string UserName { get; private set; }
@@ -26,6 +55,7 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
         public string Password { get; private set; }
         public string FirstName { get; private set; }
         public string LastName { get; private set; }
+        public string NationalCode { get; private set; }
         public ICollection<Address> Addresses { get; private set; }
 
 
@@ -42,7 +72,7 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
             if (password.Length < 8)
                 throw new PasswordLengthValidationException();
 
-            Password = password;
+            Password = _passwordHasher.Hash(password, Id.ToString());
         }
 
         private void SetLastName(string lastName)
@@ -79,6 +109,8 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
 
             UserName = userName;
         }
+
+
 
     }
 }
