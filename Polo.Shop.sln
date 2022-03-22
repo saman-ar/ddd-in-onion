@@ -33,6 +33,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.CustomerContext.A
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Framework.ApplicationService", "Polo.Framework.ApplicationService\Polo.Framework.ApplicationService.csproj", "{D3E522FB-121C-4432-9EDB-376499EEE877}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Framework.DependencyInjection", "Polo.Framework.DependencyInjection\Polo.Framework.DependencyInjection.csproj", "{74F8662E-6DFE-4D8B-A134-A9BE5B87F174}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -71,6 +73,10 @@ Global
 		{D3E522FB-121C-4432-9EDB-376499EEE877}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D3E522FB-121C-4432-9EDB-376499EEE877}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D3E522FB-121C-4432-9EDB-376499EEE877}.Release|Any CPU.Build.0 = Release|Any CPU
+		{74F8662E-6DFE-4D8B-A134-A9BE5B87F174}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{74F8662E-6DFE-4D8B-A134-A9BE5B87F174}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{74F8662E-6DFE-4D8B-A134-A9BE5B87F174}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{74F8662E-6DFE-4D8B-A134-A9BE5B87F174}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -88,6 +94,7 @@ Global
 		{6C838A81-58ED-44F3-AFA2-4B1CB57D4CCA} = {C7D76CD7-BEB0-48E3-84F6-651F45A31E21}
 		{EAE0F9C5-0E3C-4BDD-BAD6-A77C4137254B} = {C7D76CD7-BEB0-48E3-84F6-651F45A31E21}
 		{D3E522FB-121C-4432-9EDB-376499EEE877} = {B4D17C1E-453B-4E52-B62E-BA35BF2F130F}
+		{74F8662E-6DFE-4D8B-A134-A9BE5B87F174} = {B4D17C1E-453B-4E52-B62E-BA35BF2F130F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AC18326-A3C2-40E5-93CD-31F8091043F7}
