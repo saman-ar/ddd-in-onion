@@ -21,7 +21,7 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
         public Customer(
             INationalCodeDublicationChecker nationalCodeDublicationChecker,
             IPasswordHasher passwordHasher,
-            string userName,
+            //string userName,
             string email,
             string password,
             string firstName,
@@ -31,7 +31,7 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
             _nationalCodeDublicationChecker = nationalCodeDublicationChecker;
             _passwordHasher = passwordHasher;
 
-            SetUserName(userName);
+            //SetUserName(userName);
             SetEmail(email);
             SetFirstName(firstName);
             SetLastName(lastName);
@@ -39,17 +39,7 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
             SetNationalCode(nationalCode);
         }
 
-        private void SetNationalCode(string nationalCode)
-        {
-            if (string.IsNullOrWhiteSpace(nationalCode))
-                throw new NationalCodeRequiredException();
-
-            if (_nationalCodeDublicationChecker.IsDublicated(nationalCode))
-                throw new NationalCodeDublicatedException();
-
-            NationalCode = nationalCode;
-        }
-
+        
         public string UserName { get; private set; }
         public string Email { get; private set; }
         public string Password { get; private set; }
@@ -61,7 +51,19 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
 
         public void AddAddress(Address address)
         {
+            //Do checking some invariants
             Addresses.Add(address);
+        }
+
+        private void SetNationalCode(string nationalCode)
+        {
+            if (string.IsNullOrWhiteSpace(nationalCode))
+                throw new NationalCodeRequiredException();
+
+            if (_nationalCodeDublicationChecker.IsDublicated(nationalCode))
+                throw new NationalCodeDublicatedException();
+
+            NationalCode = nationalCode;
         }
 
         private void SetPassword(string password)

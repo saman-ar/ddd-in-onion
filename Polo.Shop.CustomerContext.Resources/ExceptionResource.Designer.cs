@@ -61,6 +61,15 @@ namespace Polo.Shop.CustomerContext.Resources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to ادرس را وارد کنید.
+        /// </summary>
+        public static string AddressLineRequiredException {
+            get {
+                return ResourceManager.GetString("AddressLineRequiredException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to ایمیل را درست وارد کنید.
         /// </summary>
         public static string CkeckEmailPatternException {
@@ -129,6 +138,15 @@ namespace Polo.Shop.CustomerContext.Resources {
         public static string PasswordRequiredException {
             get {
                 return ResourceManager.GetString("PasswordRequiredException", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to کد پستی را وارد کنید.
+        /// </summary>
+        public static string PostalCodeRequiredException {
+            get {
+                return ResourceManager.GetString("PostalCodeRequiredException", resourceCulture);
             }
         }
         
