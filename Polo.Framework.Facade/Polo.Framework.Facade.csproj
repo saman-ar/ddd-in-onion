@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Polo.Framework.ApplicationService\Polo.Framework.ApplicationService.csproj" />
     <ProjectReference Include="..\Polo.Framework.Core\Polo.Framework.Core.csproj" />
   </ItemGroup>
 

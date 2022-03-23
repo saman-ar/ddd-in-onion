@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Polo.Framework.Core.ApplicationService;
+using System;
 
 namespace Polo.Framework.ApplicationService
 {

@@ -1,8 +1,8 @@
-﻿using Polo.Framework.ApplicationService;
+﻿using Polo.Framework.Core.ApplicationService;
 
 namespace Polo.Shop.CustomerContext.ApplicationService.Contracts.CustomerAggregate
 {
-    public class SignupCommand :  Command
+   public class SignupCommand :  Command
     {
         public string  Email { get; set; }
         public string FirstName { get; set; }

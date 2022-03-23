@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Polo.Framework.Core.ApplicationService;
+using System;
 
 namespace Polo.Shop.CustomerContext.ApplicationService.Contracts.CustomerAggregate
 {
-    public class AddAddressCommand :Command
+   public class AddAddressCommand :Command
     {
 
 
