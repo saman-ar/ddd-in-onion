@@ -41,6 +41,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Framework.Facade", "Po
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.CustomerContext.Facade.Contracts", "Polo.Shop.CustomerContext.Facade.Contracts\Polo.Shop.CustomerContext.Facade.Contracts.csproj", "{9870A2EE-8C74-41E1-9730-71CA0DD2D6F8}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.CustomerContext.Configuration", "Polo.Shop.CustomerContext.Configuration\Polo.Shop.CustomerContext.Configuration.csproj", "{4AACD986-8F7A-41B2-A391-DD6169EE4415}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -95,6 +97,10 @@ Global
 		{9870A2EE-8C74-41E1-9730-71CA0DD2D6F8}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9870A2EE-8C74-41E1-9730-71CA0DD2D6F8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9870A2EE-8C74-41E1-9730-71CA0DD2D6F8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4AACD986-8F7A-41B2-A391-DD6169EE4415}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4AACD986-8F7A-41B2-A391-DD6169EE4415}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4AACD986-8F7A-41B2-A391-DD6169EE4415}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4AACD986-8F7A-41B2-A391-DD6169EE4415}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -116,6 +122,7 @@ Global
 		{B9CADC8A-A4A2-4FB1-8AFB-D10887D2ACA4} = {8D53CEC0-3DE1-4914-B512-4A07E57C918B}
 		{2FD9FE40-CD72-4637-A99F-5BCCEB8775B3} = {B4D17C1E-453B-4E52-B62E-BA35BF2F130F}
 		{9870A2EE-8C74-41E1-9730-71CA0DD2D6F8} = {8D53CEC0-3DE1-4914-B512-4A07E57C918B}
+		{4AACD986-8F7A-41B2-A391-DD6169EE4415} = {15981584-A912-4FFB-B0F3-ADC8260823B2}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AC18326-A3C2-40E5-93CD-31F8091043F7}

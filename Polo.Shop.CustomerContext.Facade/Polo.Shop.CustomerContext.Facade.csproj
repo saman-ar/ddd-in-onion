@@ -8,6 +8,7 @@
     <ProjectReference Include="..\Polo.Framework.Core\Polo.Framework.Core.csproj" />
     <ProjectReference Include="..\Polo.Framework.Facade\Polo.Framework.Facade.csproj" />
     <ProjectReference Include="..\Polo.Shop.CustomerContext.ApplicationService.Contracts\Polo.Shop.CustomerContext.ApplicationService.Contracts.csproj" />
+    <ProjectReference Include="..\Polo.Shop.CustomerContext.Facade.Contracts\Polo.Shop.CustomerContext.Facade.Contracts.csproj" />
   </ItemGroup>
 
 </Project>
