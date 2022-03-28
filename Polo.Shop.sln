@@ -15,33 +15,35 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ApplicationService", "Appli
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Facade", "Facade", "{8D53CEC0-3DE1-4914-B512-4A07E57C918B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.CustomerContext.Domain", "Polo.Shop.CustomerContext.Domain\Polo.Shop.CustomerContext.Domain.csproj", "{58807A94-4B97-4FB1-873B-5DEB495A3A4E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polo.Shop.CustomerContext.Domain", "Polo.Shop.CustomerContext.Domain\Polo.Shop.CustomerContext.Domain.csproj", "{58807A94-4B97-4FB1-873B-5DEB495A3A4E}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{B4D17C1E-453B-4E52-B62E-BA35BF2F130F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Framework.Domain", "Shoniz.Framework.Domain\Polo.Framework.Domain.csproj", "{FE81C00C-99DC-43D9-A38F-00F1AF908F6E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polo.Framework.Domain", "Shoniz.Framework.Domain\Polo.Framework.Domain.csproj", "{FE81C00C-99DC-43D9-A38F-00F1AF908F6E}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.CustomerContext.Resources", "Polo.Shop.CustomerContext.Resources\Polo.Shop.CustomerContext.Resources.csproj", "{3BEB35C2-1C00-493E-A24E-F7F0C54868C4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polo.Shop.CustomerContext.Resources", "Polo.Shop.CustomerContext.Resources\Polo.Shop.CustomerContext.Resources.csproj", "{3BEB35C2-1C00-493E-A24E-F7F0C54868C4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Framework.Security", "Polo.Framework.Security\Polo.Framework.Security.csproj", "{9EA37C64-A58B-4C21-AA63-8BB2A1BE885F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polo.Framework.Security", "Polo.Framework.Security\Polo.Framework.Security.csproj", "{9EA37C64-A58B-4C21-AA63-8BB2A1BE885F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Framework.Core", "Polo.Framework.Core\Polo.Framework.Core.csproj", "{7C51CE92-EA17-42A0-9BCB-0716FAC77D65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polo.Framework.Core", "Polo.Framework.Core\Polo.Framework.Core.csproj", "{7C51CE92-EA17-42A0-9BCB-0716FAC77D65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.CustomerContext.AppliactionService", "Polo.Shop.CustomerContext.AppliactionService\Polo.Shop.CustomerContext.AppliactionService.csproj", "{6C838A81-58ED-44F3-AFA2-4B1CB57D4CCA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polo.Shop.CustomerContext.AppliactionService", "Polo.Shop.CustomerContext.AppliactionService\Polo.Shop.CustomerContext.AppliactionService.csproj", "{6C838A81-58ED-44F3-AFA2-4B1CB57D4CCA}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.CustomerContext.ApplicationService.Contracts", "Polo.Shop.CustomerContext.ApplicationService.Contracts\Polo.Shop.CustomerContext.ApplicationService.Contracts.csproj", "{EAE0F9C5-0E3C-4BDD-BAD6-A77C4137254B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polo.Shop.CustomerContext.ApplicationService.Contracts", "Polo.Shop.CustomerContext.ApplicationService.Contracts\Polo.Shop.CustomerContext.ApplicationService.Contracts.csproj", "{EAE0F9C5-0E3C-4BDD-BAD6-A77C4137254B}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Framework.ApplicationService", "Polo.Framework.ApplicationService\Polo.Framework.ApplicationService.csproj", "{D3E522FB-121C-4432-9EDB-376499EEE877}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polo.Framework.ApplicationService", "Polo.Framework.ApplicationService\Polo.Framework.ApplicationService.csproj", "{D3E522FB-121C-4432-9EDB-376499EEE877}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Framework.DependencyInjection", "Polo.Framework.DependencyInjection\Polo.Framework.DependencyInjection.csproj", "{74F8662E-6DFE-4D8B-A134-A9BE5B87F174}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polo.Framework.DependencyInjection", "Polo.Framework.DependencyInjection\Polo.Framework.DependencyInjection.csproj", "{74F8662E-6DFE-4D8B-A134-A9BE5B87F174}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.CustomerContext.Facade", "Polo.Shop.CustomerContext.Facade\Polo.Shop.CustomerContext.Facade.csproj", "{B9CADC8A-A4A2-4FB1-8AFB-D10887D2ACA4}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polo.Shop.CustomerContext.Facade", "Polo.Shop.CustomerContext.Facade\Polo.Shop.CustomerContext.Facade.csproj", "{B9CADC8A-A4A2-4FB1-8AFB-D10887D2ACA4}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Framework.Facade", "Polo.Framework.Facade\Polo.Framework.Facade.csproj", "{2FD9FE40-CD72-4637-A99F-5BCCEB8775B3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polo.Framework.Facade", "Polo.Framework.Facade\Polo.Framework.Facade.csproj", "{2FD9FE40-CD72-4637-A99F-5BCCEB8775B3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.CustomerContext.Facade.Contracts", "Polo.Shop.CustomerContext.Facade.Contracts\Polo.Shop.CustomerContext.Facade.Contracts.csproj", "{9870A2EE-8C74-41E1-9730-71CA0DD2D6F8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polo.Shop.CustomerContext.Facade.Contracts", "Polo.Shop.CustomerContext.Facade.Contracts\Polo.Shop.CustomerContext.Facade.Contracts.csproj", "{9870A2EE-8C74-41E1-9730-71CA0DD2D6F8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.CustomerContext.Configuration", "Polo.Shop.CustomerContext.Configuration\Polo.Shop.CustomerContext.Configuration.csproj", "{4AACD986-8F7A-41B2-A391-DD6169EE4415}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Polo.Shop.CustomerContext.Configuration", "Polo.Shop.CustomerContext.Configuration\Polo.Shop.CustomerContext.Configuration.csproj", "{4AACD986-8F7A-41B2-A391-DD6169EE4415}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.CustomerContext.Domain.Services", "Polo.Shop.CustomerContext.Domain.Services\Polo.Shop.CustomerContext.Domain.Services.csproj", "{3EAF8FB8-FF1D-4EA2-83E3-8C58271E6B92}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -101,6 +103,10 @@ Global
 		{4AACD986-8F7A-41B2-A391-DD6169EE4415}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4AACD986-8F7A-41B2-A391-DD6169EE4415}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4AACD986-8F7A-41B2-A391-DD6169EE4415}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3EAF8FB8-FF1D-4EA2-83E3-8C58271E6B92}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EAF8FB8-FF1D-4EA2-83E3-8C58271E6B92}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EAF8FB8-FF1D-4EA2-83E3-8C58271E6B92}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EAF8FB8-FF1D-4EA2-83E3-8C58271E6B92}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -123,6 +129,7 @@ Global
 		{2FD9FE40-CD72-4637-A99F-5BCCEB8775B3} = {B4D17C1E-453B-4E52-B62E-BA35BF2F130F}
 		{9870A2EE-8C74-41E1-9730-71CA0DD2D6F8} = {8D53CEC0-3DE1-4914-B512-4A07E57C918B}
 		{4AACD986-8F7A-41B2-A391-DD6169EE4415} = {15981584-A912-4FFB-B0F3-ADC8260823B2}
+		{3EAF8FB8-FF1D-4EA2-83E3-8C58271E6B92} = {5EDE7379-6E8D-47B2-964F-488E9E1E0121}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AC18326-A3C2-40E5-93CD-31F8091043F7}

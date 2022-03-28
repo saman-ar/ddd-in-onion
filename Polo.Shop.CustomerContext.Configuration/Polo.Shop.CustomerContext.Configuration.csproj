@@ -8,6 +8,7 @@
     <ProjectReference Include="..\Polo.Framework.DependencyInjection\Polo.Framework.DependencyInjection.csproj" />
     <ProjectReference Include="..\Polo.Framework.Security\Polo.Framework.Security.csproj" />
     <ProjectReference Include="..\Polo.Shop.CustomerContext.AppliactionService\Polo.Shop.CustomerContext.AppliactionService.csproj" />
+    <ProjectReference Include="..\Polo.Shop.CustomerContext.Domain.Services\Polo.Shop.CustomerContext.Domain.Services.csproj" />
     <ProjectReference Include="..\Polo.Shop.CustomerContext.Facade\Polo.Shop.CustomerContext.Facade.csproj" />
   </ItemGroup>
 

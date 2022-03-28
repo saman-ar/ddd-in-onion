@@ -1,5 +1,4 @@
-﻿using Polo.Framework.ApplicationService;
-using Polo.Framework.Core.ApplicationService;
+﻿using Polo.Framework.Core.ApplicationService;
 using Polo.Framework.Core.DependencyInjection;
 
 namespace Polo.Framework.ApplicationService

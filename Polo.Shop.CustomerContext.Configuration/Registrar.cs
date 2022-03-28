@@ -3,11 +3,12 @@ using Castle.Windsor;
 using Polo.Framework.ApplicationService;
 using Polo.Framework.Core.Security;
 using Polo.Framework.DependencyInjection;
+using Polo.Framework.Domain;
 using Polo.Framework.Facade;
 using Polo.Framework.Security;
 using Polo.Shop.CustomerContext.AppliactionService.CustomerAggregste;
+using Polo.Shop.CustomerContext.Domain.Services.CustomerAggregate;
 using Polo.Shop.CustomerContext.Facade;
-using System;
 
 namespace Polo.Shop.CustomerContext.Configuration
 {
@@ -34,6 +35,15 @@ namespace Polo.Shop.CustomerContext.Configuration
                           .BasedOn(typeof(FacadeCommandBase))
                           .WithServiceAllInterfaces()
                           .LifestyleTransient());
+
+         ///Register DomainServices service
+         container.Register(Classes
+                          .FromAssemblyContaining<NationalCodeDublicationChecker>()
+                          .BasedOn(typeof(IDomainService))
+                          .WithServiceAllInterfaces()
+                          .LifestyleTransient());
+
+
 
 
 
