@@ -1,10 +1,7 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <ApplicationIcon />
-    <OutputType>Library</OutputType>
-    <StartupObject />
   </PropertyGroup>
 
   <ItemGroup>
@@ -13,8 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Polo.Framework.Persistence\Polo.Framework.Persistence.csproj" />
-    <ProjectReference Include="..\Polo.Shop.CustomerContext.Domain\Polo.Shop.CustomerContext.Domain.csproj" />
+    <ProjectReference Include="..\Shoniz.Framework.Domain\Polo.Framework.Domain.csproj" />
   </ItemGroup>
 
 </Project>

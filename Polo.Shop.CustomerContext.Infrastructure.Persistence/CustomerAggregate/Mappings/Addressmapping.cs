@@ -2,14 +2,11 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Polo.Framework.Persistence;
 using Polo.Shop.CustomerContext.Domain.CustomerAggregate;
-using System;
-using System.Collections.Generic;
 using System.Data;
-using System.Text;
 
 namespace Polo.Shop.CustomerContext.Infrastructure.Persistence.CustomerAggregate.Mappings
 {
-   public class AddressMapping : EntityMappingBase<Address>  , IEntityTypeConfiguration<Address>
+   public class AddressMapping : EntityMappingBase<Address>, IEntityTypeConfiguration<Address>
    {
       public void Configure(EntityTypeBuilder<Address> builder)
       {

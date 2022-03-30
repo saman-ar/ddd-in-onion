@@ -17,6 +17,8 @@ namespace Polo.Shop.CustomerContext.Infrastructure.Persistence.CustomerAggregate
          //       .ValueGeneratedNever()
          //       .IsRequired();
 
+         //builder.HasIndex(c => c.NationalCode).IsUnique();
+
          builder.Property(c => c.NationalCode)
                .HasMaxLength(10)
                .HasColumnType(SqlDbType.Char.ToString())

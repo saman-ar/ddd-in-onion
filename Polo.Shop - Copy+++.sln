@@ -49,9 +49,9 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.CustomerContext.Infrastructure.Persistence", "Polo.Shop.CustomerContext.Infrastructure.Persistence\Polo.Shop.CustomerContext.Infrastructure.Persistence.csproj", "{7764AC7E-08F4-4374-BD60-D4650F64C334}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Framework.Persistence", "Polo.Framework.Persistence\Polo.Framework.Persistence.csproj", "{56585952-A6AB-4DAD-B9EF-E569F1CEBE33}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Framework.Persistence", "..\Polo.Framework.Persistence\Polo.Framework.Persistence.csproj", "{56585952-A6AB-4DAD-B9EF-E569F1CEBE33}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.Persistence", "Polo.Shop.Persistence\Polo.Shop.Persistence.csproj", "{5E333238-63CB-456F-8F93-1ECBC509DAF7}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.Persistence", "..\Polo.Shop.Persistence\Polo.Shop.Persistence.csproj", "{5E333238-63CB-456F-8F93-1ECBC509DAF7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
