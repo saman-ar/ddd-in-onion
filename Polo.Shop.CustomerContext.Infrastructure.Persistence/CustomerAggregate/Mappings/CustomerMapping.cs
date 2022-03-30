@@ -51,6 +51,7 @@ namespace Polo.Shop.CustomerContext.Infrastructure.Persistence.CustomerAggregate
 
          //builder.ToTable(nameof(Customer), nameof(CustomerContext));
 
+         ///adding this line of code is so important , dont forget this
          base.Configure(builder);
       }
    }
