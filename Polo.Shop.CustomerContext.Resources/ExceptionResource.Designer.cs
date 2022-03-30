@@ -72,9 +72,9 @@ namespace Polo.Shop.CustomerContext.Resources {
         /// <summary>
         ///   Looks up a localized string similar to ایمیل را درست وارد کنید.
         /// </summary>
-        public static string CkeckEmailPatternException {
+        public static string CheckEmailPatternException {
             get {
-                return ResourceManager.GetString("CkeckEmailPatternException", resourceCulture);
+                return ResourceManager.GetString("CheckEmailPatternException", resourceCulture);
             }
         }
         
@@ -108,9 +108,9 @@ namespace Polo.Shop.CustomerContext.Resources {
         /// <summary>
         ///   Looks up a localized string similar to کدملی باید یکتا باشد.
         /// </summary>
-        public static string NationalCodeDublicatedException {
+        public static string NationalCodeDublicationException {
             get {
-                return ResourceManager.GetString("NationalCodeDublicatedException", resourceCulture);
+                return ResourceManager.GetString("NationalCodeDublicationException", resourceCulture);
             }
         }
         

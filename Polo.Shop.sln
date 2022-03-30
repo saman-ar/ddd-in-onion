@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.CustomerContext.I
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Framework.Persistence", "..\Polo.Framework.Persistence\Polo.Framework.Persistence.csproj", "{56585952-A6AB-4DAD-B9EF-E569F1CEBE33}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.Persistence", "..\Polo.Shop.Persistence\Polo.Shop.Persistence.csproj", "{5E333238-63CB-456F-8F93-1ECBC509DAF7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -121,6 +123,10 @@ Global
 		{56585952-A6AB-4DAD-B9EF-E569F1CEBE33}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{56585952-A6AB-4DAD-B9EF-E569F1CEBE33}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{56585952-A6AB-4DAD-B9EF-E569F1CEBE33}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5E333238-63CB-456F-8F93-1ECBC509DAF7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5E333238-63CB-456F-8F93-1ECBC509DAF7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5E333238-63CB-456F-8F93-1ECBC509DAF7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5E333238-63CB-456F-8F93-1ECBC509DAF7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -6,7 +6,7 @@ using System.Text;
 
 namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate.Exceptions
 {
-    public class CkeckEmailPatternException : DomainException
+    public class CheckEmailPatternException : DomainException
     {
         public override string Message => ExceptionResource.CheckEmailPatternException;
     }

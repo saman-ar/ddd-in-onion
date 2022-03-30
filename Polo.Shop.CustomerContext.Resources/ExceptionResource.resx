@@ -120,7 +120,7 @@
   <data name="AddressLineRequiredException" xml:space="preserve">
     <value>ادرس را وارد کنید</value>
   </data>
-  <data name="CkeckEmailPatternException" xml:space="preserve">
+  <data name="CheckEmailPatternException" xml:space="preserve">
     <value>ایمیل را درست وارد کنید</value>
   </data>
   <data name="EmailRequiredException" xml:space="preserve">
@@ -132,7 +132,7 @@
   <data name="LastNameRequiredException" xml:space="preserve">
     <value>نام خانوادگی را وارد کنید</value>
   </data>
-  <data name="NationalCodeDublicatedException" xml:space="preserve">
+  <data name="NationalCodeDublicationException" xml:space="preserve">
     <value>کدملی باید یکتا باشد</value>
   </data>
   <data name="NationalCodeRequiredException" xml:space="preserve">

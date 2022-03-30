@@ -99,7 +99,7 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
                 throw new EmailRequiredException();
 
             if (!email.Contains("@"))
-                throw new CkeckEmailPatternException();
+                throw new CheckEmailPatternException();
 
             Email = email;
         }
