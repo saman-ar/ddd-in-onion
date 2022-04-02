@@ -1,33 +1,45 @@
-﻿using Polo.Shop.CustomerContext.Domain.CustomerAggregate;
+﻿using Polo.Framework.Persistence;
+using Polo.Shop.CustomerContext.Domain.CustomerAggregate;
 using Polo.Shop.CustomerContext.Domain.CustomerAggregate.Services;
 using System;
-using System.Collections.Generic;
 using System.Linq.Expressions;
-using System.Text;
+using System.Linq;
+using Microsoft.EntityFrameworkCore;
+using System.Collections.Generic;
 
 namespace Polo.Shop.CustomerContext.Infrastructure.Persistence.CustomerAggregate
 {
    public class CustomerRepository : ICustomerRepository
-
    {
-      public bool Contains(Expression<Func<Customer, bool>> predicate)
+
+      private readonly DbContextBase _context;
+      public CustomerRepository(DbContextBase context)
       {
-         throw new NotImplementedException();
+         _context = context;
       }
 
       public void CreateCustomer(Customer customer)
       {
-         throw new NotImplementedException();
+         _context.Set<Customer>().Add(customer);
+
+         _context.SaveChanges();
       }
 
       public Customer GetById(Guid customerId)
       {
-         throw new NotImplementedException();
+        return _context.Set<Customer>().Include(c=>c.Addresses).Single(c => c.Id == customerId);
       }
 
       public void Update(Customer customer)
       {
          throw new NotImplementedException();
       }
+
+      public bool Contains(Expression<Func<Customer, bool>> predicate)
+      {
+
+      }
+      
+
    }
 }
