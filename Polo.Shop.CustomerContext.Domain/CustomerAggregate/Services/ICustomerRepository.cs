@@ -4,7 +4,7 @@ using System.Linq.Expressions;
 
 namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate.Services
 {
-   public interface ICustomerRepository : IRepository
+   public interface ICustomerRepository : IRepository<Customer>
    {
       void CreateCustomer(Customer customer);
       Customer GetById(Guid customerId);

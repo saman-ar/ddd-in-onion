@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using Microsoft.EntityFrameworkCore;
-using Microsoft.EntityFrameworkCore.Metadata.Builders;
+﻿using Microsoft.EntityFrameworkCore;
 
 namespace Polo.Framework.Persistence
 {
@@ -10,7 +6,7 @@ namespace Polo.Framework.Persistence
    public abstract class DbContextBase: DbContext
 
    {
-      public DbContextBase(DbContextOptions options) : base(options`)
+      public DbContextBase(DbContextOptions options) : base(options)
       { }
 
       protected override void OnModelCreating(ModelBuilder modelBuilder)
@@ -20,5 +16,6 @@ namespace Polo.Framework.Persistence
          DetectEntityMappings(modelBuilder);
       }
       protected abstract void DetectEntityMappings(ModelBuilder modelBuilder);
+
    }
 }

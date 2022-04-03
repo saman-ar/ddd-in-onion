@@ -5,29 +5,20 @@ using System;
 using System.Linq.Expressions;
 using System.Linq;
 using Microsoft.EntityFrameworkCore;
-using System.Collections.Generic;
 
 namespace Polo.Shop.CustomerContext.Infrastructure.Persistence.CustomerAggregate
 {
-   public class CustomerRepository : ICustomerRepository
+   public class CustomerRepository : RepositoryBase<Customer> , ICustomerRepository
    {
 
-      private readonly DbContextBase _context;
-      public CustomerRepository(DbContextBase context)
-      {
-         _context = context;
-      }
+      public CustomerRepository(DbContextBase context):base(context)
+      {      }
 
       public void CreateCustomer(Customer customer)
       {
-         _context.Set<Customer>().Add(customer);
+         Set.Add(customer);
 
          _context.SaveChanges();
-      }
-
-      public Customer GetById(Guid customerId)
-      {
-        return _context.Set<Customer>().Include(c=>c.Addresses).Single(c => c.Id == customerId);
       }
 
       public void Update(Customer customer)
@@ -37,9 +28,9 @@ namespace Polo.Shop.CustomerContext.Infrastructure.Persistence.CustomerAggregate
 
       public bool Contains(Expression<Func<Customer, bool>> predicate)
       {
-
+         return SetWithIncludeExpressions.Any(predicate);
       }
-      
+
 
    }
 }

@@ -7,7 +7,6 @@ namespace Polo.Shop.Persistence
 {
    //public class ShopDbContext : DbContextBase<ShopDbContext>
    public class ShopDbContext : DbContextBase
-
    {
       public ShopDbContext(DbContextOptions options) : base(options)
       {      }

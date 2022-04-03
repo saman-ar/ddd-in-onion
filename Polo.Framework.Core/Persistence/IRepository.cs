@@ -1,10 +1,8 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Polo.Framework.Domain;
 
 namespace Polo.Framework.Core.Persistence
 {
-   public interface IRepository
+   public interface IRepository<TAggregateRoot> where TAggregateRoot : IAggregateRoot<TAggregateRoot>
    {
    }
 }

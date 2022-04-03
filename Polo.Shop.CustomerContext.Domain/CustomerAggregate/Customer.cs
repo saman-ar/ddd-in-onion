@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Linq.Expressions;
 using Polo.Framework.Core;
 using Polo.Framework.Core.Security;
 using Polo.Framework.Domain;
@@ -8,7 +9,7 @@ using Polo.Shop.CustomerContext.Domain.CustomerAggregate.Services;
 
 namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
 {
-   public class Customer : EntityBase
+   public class Customer : EntityBase, IAggregateRoot<Customer>
    {
       private string _userName;
       private string _password;
@@ -18,7 +19,7 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
       private readonly INationalCodeDublicationChecker _nationalCodeDublicationChecker;
       private readonly IPasswordHasher _passwordHasher;
 
-      private Customer()
+      public Customer()
       { }
 
       public Customer(
@@ -115,7 +116,11 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
          UserName = userName;
       }
 
+      public IEnumerable<Expression<Func<Customer, object>>> GetIncludeExpression()
+      {
+         yield return c => c.Addresses;
 
 
+      }
    }
 }
