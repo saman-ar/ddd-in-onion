@@ -65,6 +65,7 @@ namespace Polo.Shop.CustomerContext.Configuration
                           .LifestyleScoped());
 
 
+
       }
    }
 }

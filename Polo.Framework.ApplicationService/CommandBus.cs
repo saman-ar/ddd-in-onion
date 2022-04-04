@@ -8,7 +8,12 @@ namespace Polo.Framework.ApplicationService
       public void Dispatch<TCommand>(TCommand command) where TCommand : Command
       {
          var commandHandler = ServiceLocator.Current.Resolve<ICommandHandler<TCommand>>();
-         commandHandler.Execute(command);
+
+         var transactionalDecorator = new TransactionalCommandHandler<TCommand>(commandHandler);
+         var logDecorator = new LogCommandHandler<TCommand>(transactionalDecorator);
+         var ExceptionControllingDecorator = new ExceptionCommandHandler<TCommand>(logDecorator);
+
+         ExceptionControllingDecorator.Execute(command);
       }
    }
 }
