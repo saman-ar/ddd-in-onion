@@ -1,4 +1,5 @@
 ﻿using Polo.Framework.Core.ApplicationService;
+using System;
 
 namespace Polo.Framework.ApplicationService
 {
@@ -15,10 +16,9 @@ namespace Polo.Framework.ApplicationService
          {
             _commandHandler.Execute(command);
          }
-         catch (System.Exception)
+         catch (Exception)
          {
-
-           
+            //TODO: Handle Exception
          }
       }
    }

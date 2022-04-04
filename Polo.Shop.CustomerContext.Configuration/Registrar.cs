@@ -13,6 +13,7 @@ using Polo.Framework.Security;
 using Polo.Shop.CustomerContext.AppliactionService.CustomerAggregste;
 using Polo.Shop.CustomerContext.Domain.Services.CustomerAggregate;
 using Polo.Shop.CustomerContext.Facade;
+using Polo.Shop.CustomerContext.Infrastructure.Persistence;
 using Polo.Shop.CustomerContext.Infrastructure.Persistence.CustomerAggregate;
 using Polo.Shop.Persistence;
 
@@ -35,6 +36,11 @@ namespace Polo.Shop.CustomerContext.Configuration
                            .ImplementedBy<ShopDbContext>()
                            .LifestyleScoped());
 
+         ///register IUnitOfWork Service
+         container.Register(Component
+                           .For<IUnitOfWork>()
+                           .ImplementedBy<UnitOfWork>()
+                           .LifestyleScoped());
 
          ///register services for "ApplicationServices layer"
          container.Register(Classes

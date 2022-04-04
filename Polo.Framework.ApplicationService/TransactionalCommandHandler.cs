@@ -1,5 +1,6 @@
 ﻿using Polo.Framework.Core.ApplicationService;
-using System;
+using Polo.Framework.Core.DependencyInjection;
+using Polo.Framework.Persistence;
 
 namespace Polo.Framework.ApplicationService
 {
@@ -12,11 +13,19 @@ namespace Polo.Framework.ApplicationService
       }
       public void Execute(TCommand command)
       {
-         //begin transaction
+         var unitOfWork = ServiceLocator.Current.Resolve<IUnitOfWork>();
 
-         _commandHandler.Execute(command);
+         try
+         {
+            _commandHandler.Execute(command);
+            unitOfWork.Commit();
+         }
+         catch 
+         {
+            unitOfWork.RollBack();
+            throw;
+         }
 
-         //commit transaction
       }
    }
 

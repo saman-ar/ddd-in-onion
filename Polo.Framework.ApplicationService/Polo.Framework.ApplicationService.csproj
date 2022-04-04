@@ -6,6 +6,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Polo.Framework.Core\Polo.Framework.Core.csproj" />
+    <ProjectReference Include="..\Polo.Framework.Persistence\Polo.Framework.Persistence.csproj" />
   </ItemGroup>
 
 </Project>
