@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Polo.Shop.ReadModel.Context\Polo.Shop.ReadModel.Context.csproj" />
+    <ProjectReference Include="..\Polo.Shop.ReadModel.Queries.Contracts\Polo.Shop.ReadModel.Queries.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>
