@@ -9,17 +9,19 @@ namespace Polo.Shop.OrderContext.Domain.OrderAggregate
 {
    public class Order : EntityBase, IAggregateRoot<Order>
    {
-      public Order(int number)
+      public Order(int number , IEnumerable<OrderItem> cart)
       {
          Number = number;
+         SetCart(cart);
       }
+            
       public int Number { get; set; }
       public decimal Tax { get; set; }
       public decimal ShippingCost { get; set; }
       public decimal TotalAmount { get; set; }
       public ICollection<OrderItem> Cart { get; set; }
 
-      public void AddOrderItem(Guid productId, int quantity, decimal price)
+      private void AddOrderItem(Guid productId, int quantity, decimal price)
       {
          Cart.Add(new OrderItem
          {
@@ -31,7 +33,20 @@ namespace Polo.Shop.OrderContext.Domain.OrderAggregate
          CalculateMount();
 
       }
-            
+       
+      private void SetCart(IEnumerable<OrderItem> cart)
+      {
+         if (!cart.Any()) // or any negative logic
+         {
+            // throw exception
+         }
+
+         foreach (var item in cart)
+         {
+            AddOrderItem(item.ProductId, item.Quantity, item.Price);
+         }
+      }
+
       public IEnumerable<Expression<Func<Order, dynamic>>> GetIncludeExpression()
       {
          yield return o => o.Cart;

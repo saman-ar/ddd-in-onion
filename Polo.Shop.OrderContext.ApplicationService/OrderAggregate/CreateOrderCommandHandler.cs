@@ -2,9 +2,8 @@
 using Polo.Shop.OrderContext.ApplicationService.Contracts.OrderAggregate;
 using Polo.Shop.OrderContext.Domain.OrderAggregate;
 using Polo.Shop.OrderContext.Domain.OrderAggregate.Services;
-using System;
-using System.Collections.Generic;
-using System.Text;
+using System.Linq;
+using OrderItem = Polo.Shop.OrderContext.Domain.OrderAggregate.OrderItem;
 
 namespace Polo.Shop.OrderContext.ApplicationService.OrderAggregate
 {
@@ -22,12 +21,9 @@ namespace Polo.Shop.OrderContext.ApplicationService.OrderAggregate
       {
          int orderNumber=_orderRepository.GenerateOrderNumber();
 
-         var order = new Order(orderNumber);
+         var cart = command.Cart.Select(c => new OrderItem(c.ProductId,c.Quantity,c.Price));
 
-         foreach (var item in command.Cart)
-         {
-            order.AddOrderItem(item.ProductId, item.Quantity, item.Price);
-         }
+         var order = new Order(orderNumber,cart);
 
          _orderRepository.Create(order);
       }
