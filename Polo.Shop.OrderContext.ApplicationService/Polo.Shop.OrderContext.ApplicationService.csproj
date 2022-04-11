@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.2</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Polo.Framework.ApplicationService\Polo.Framework.ApplicationService.csproj" />
+    <ProjectReference Include="..\Polo.Shop.OrderContext.ApplicationService.Contracts\Polo.Shop.OrderContext.ApplicationService.Contracts.csproj" />
+  </ItemGroup>
+
+</Project>

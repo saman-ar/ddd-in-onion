@@ -43,15 +43,15 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
          SetNationalCode(nationalCode);
       }
 
-
       public string UserName { get; private set; }
       public string Email { get; private set; }
       public string Password { get; private set; }
       public string FirstName { get; private set; }
       public string LastName { get; private set; }
       public string NationalCode { get; private set; }
-      public ICollection<Address> Addresses { get; private set; }
+      public int Score { get; private set; }
 
+      public ICollection<Address> Addresses { get; private set; }
 
       public void AddAddress(Address address)
       {

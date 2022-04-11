@@ -51,6 +51,10 @@ namespace Polo.Shop.CustomerContext.Infrastructure.Persistence.CustomerAggregate
                .HasForeignKey(a => a.CustomerId)
                .OnDelete(DeleteBehavior.Cascade);
 
+         builder.Property(c => c.Score)
+               .HasColumnType(SqlDbType.Int.ToString())
+               .IsRequired();
+
          //builder.ToTable(nameof(Customer), nameof(CustomerContext));
 
          ///adding this line of code is so important , dont forget this
