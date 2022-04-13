@@ -5,6 +5,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Polo.Shop.OrderContext.Domain.Contracts\Polo.Shop.OrderContext.Domain.Contracts.csproj" />
     <ProjectReference Include="..\Shoniz.Framework.Domain\Polo.Framework.Domain.csproj" />
   </ItemGroup>
 

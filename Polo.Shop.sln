@@ -81,6 +81,8 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastru
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.OrderContext.Infrastructure.Persistence", "Polo.Shop.OrderContext.Infrastructure.Persistence\Polo.Shop.OrderContext.Infrastructure.Persistence.csproj", "{32240016-88D8-4B16-9EA5-D58DFA461EE0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Polo.Shop.OrderContext.Domain.Contracts", "Polo.Shop.OrderContext.Domain.Contracts\Polo.Shop.OrderContext.Domain.Contracts.csproj", "{638923EA-AC85-4E75-B8A7-DE69481D72D5}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -191,6 +193,10 @@ Global
 		{32240016-88D8-4B16-9EA5-D58DFA461EE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{32240016-88D8-4B16-9EA5-D58DFA461EE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{32240016-88D8-4B16-9EA5-D58DFA461EE0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{638923EA-AC85-4E75-B8A7-DE69481D72D5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{638923EA-AC85-4E75-B8A7-DE69481D72D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{638923EA-AC85-4E75-B8A7-DE69481D72D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{638923EA-AC85-4E75-B8A7-DE69481D72D5}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -231,6 +237,7 @@ Global
 		{D97BEAFB-89C0-4F6B-8C20-0030DC12FAE6} = {F8798AE8-A16A-4AC8-B475-84454D0BC12E}
 		{B5107AED-2A92-4A63-8E42-04794123DA6B} = {55FFDB1C-6175-47EF-9B18-5B0B4D59CCA1}
 		{32240016-88D8-4B16-9EA5-D58DFA461EE0} = {B5107AED-2A92-4A63-8E42-04794123DA6B}
+		{638923EA-AC85-4E75-B8A7-DE69481D72D5} = {DC64218D-18E8-4592-B2C6-1B86E2CDFA36}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {0AC18326-A3C2-40E5-93CD-31F8091043F7}
