@@ -3,11 +3,11 @@ using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace Polo.Shop.OrderContext.ApplicationService.Contracts.OrderAggregate
+namespace Polo.Shop.CustomerContext.ApplicationService.Contracts.CustomerAggregate
 {
-   public class CreateOrderCommand : Command
+   public class UpdateScoreCommand : Command
    {
       public Guid CustomerId { get; set; }
-      public IList<OrderItem> Cart { get; set; }
+      public int Score { get; set; }
    }
 }

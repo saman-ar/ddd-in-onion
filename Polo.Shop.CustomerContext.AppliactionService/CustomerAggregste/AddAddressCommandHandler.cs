@@ -8,28 +8,29 @@ using System.Text;
 
 namespace Polo.Shop.CustomerContext.AppliactionService.CustomerAggregste
 {
-    class AddAddressCommandHandler : ICommandHandler<AddAddressCommand>
-    {
-        private readonly ICustomerRepository _customerRepository;
-        public AddAddressCommandHandler(ICustomerRepository customerRepository)
-        {
-            _customerRepository = customerRepository;
-        }
-        public void Execute(AddAddressCommand command)
-        {
-            var customer = _customerRepository.GetById(command.CustomerId);
+   
+   class AddAddressCommandHandler : ICommandHandler<AddAddressCommand>
+   {
+      private readonly ICustomerRepository _customerRepository;
+      public AddAddressCommandHandler(ICustomerRepository customerRepository)
+      {
+         _customerRepository = customerRepository;
+      }
+      public void Execute(AddAddressCommand command)
+      {
+         var customer = _customerRepository.GetById(command.CustomerId);
 
-            var address = new Address(
-                        command.PostalCode,
-                        command.CustomerId,
-                        command.CityId,
-                        command.AddressLine);
-            address.Telephone = command.Telephone;
-            address.Coordinate = command.Coordinate;
+         var address = new Address(
+                     command.PostalCode,
+                     command.CustomerId,
+                     command.CityId,
+                     command.AddressLine);
+         address.Telephone = command.Telephone;
+         address.Coordinate = command.Coordinate;
 
-            customer.AddAddress(address);
+         customer.AddAddress(address);
 
-            _customerRepository.Update(customer);
-        }
-    }
+         _customerRepository.Update(customer);
+      }
+   }
 }

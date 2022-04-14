@@ -19,8 +19,7 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
       private readonly INationalCodeDublicationChecker _nationalCodeDublicationChecker;
       private readonly IPasswordHasher _passwordHasher;
 
-      public Customer()
-      { }
+      public Customer(){ }
 
       public Customer(
           INationalCodeDublicationChecker nationalCodeDublicationChecker,
@@ -57,6 +56,11 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
       {
          //Do checking some invariants
          Addresses.Add(address);
+      }
+
+      public void UpdateScore(int score)
+      {
+         Score += score;
       }
 
       private void SetNationalCode(string nationalCode)
