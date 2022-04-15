@@ -1,4 +1,5 @@
-﻿using Polo.Framework.Domain;
+﻿using Polo.Framework.Core.Domain;
+using Polo.Framework.Domain;
 using Polo.Shop.OrderContext.Domain.Contracts.OrderAggregate;
 using System;
 using System.Collections.Generic;

@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq.Expressions;
-using Polo.Framework.Core;
+using Polo.Framework.Core.Domain;
 using Polo.Framework.Core.Security;
 using Polo.Framework.Domain;
 using Polo.Shop.CustomerContext.Domain.CustomerAggregate.Exceptions;
@@ -11,15 +11,20 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
 {
    public class Customer : EntityBase, IAggregateRoot<Customer>
    {
-      private string _userName;
-      private string _password;
-      private string _firstName;
-      private string _lastName;
-      private string _email;
+      //private string _userName;
+      //private string _password;
+      //private string _firstName;
+      //private string _lastName;
+      //private string _email;
+
+      private List<Address> _addresses;
       private readonly INationalCodeDublicationChecker _nationalCodeDublicationChecker;
       private readonly IPasswordHasher _passwordHasher;
 
-      public Customer(){ }
+      public Customer()
+      {
+         _addresses = new List<Address>();
+      }
 
       public Customer(
           INationalCodeDublicationChecker nationalCodeDublicationChecker,
@@ -40,6 +45,8 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
          SetLastName(lastName);
          SetPassword(password);
          SetNationalCode(nationalCode);
+         _addresses = new List<Address>();
+
       }
 
       public string UserName { get; private set; }
@@ -49,13 +56,13 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
       public string LastName { get; private set; }
       public string NationalCode { get; private set; }
       public int Score { get; private set; }
-
-      public ICollection<Address> Addresses { get; private set; }
+      public IReadOnlyList<Address> Addresses => _addresses.AsReadOnly();
 
       public void AddAddress(Address address)
       {
+         
          //Do checking some invariants
-         Addresses.Add(address);
+         _addresses.Add(address);
       }
 
       public void UpdateScore(int score)

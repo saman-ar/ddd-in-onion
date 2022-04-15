@@ -5,6 +5,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Migrations\20220415072627_ChangeAddressListToReadonlyList.cs" />
+    <Compile Remove="Migrations\20220415092822_ChangeAddressListToReadonlyList.cs" />
     <Compile Remove="tempMigration.cs" />
   </ItemGroup>
 

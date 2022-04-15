@@ -1,4 +1,4 @@
-﻿using Polo.Framework.Domain;
+﻿using Polo.Framework.Core.Domain;
 
 namespace Polo.Framework.Core.Persistence
 {

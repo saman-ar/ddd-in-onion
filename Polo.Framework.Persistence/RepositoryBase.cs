@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Polo.Framework.Core.Domain;
 using Polo.Framework.Domain;
 using System;
 using System.Linq;

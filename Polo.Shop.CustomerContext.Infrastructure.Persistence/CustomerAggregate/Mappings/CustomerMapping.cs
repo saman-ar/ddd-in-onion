@@ -2,6 +2,7 @@
 using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using Polo.Framework.Persistence;
 using Polo.Shop.CustomerContext.Domain.CustomerAggregate;
+using System.Collections.Generic;
 using System.Data;
 
 namespace Polo.Shop.CustomerContext.Infrastructure.Persistence.CustomerAggregate.Mappings
@@ -46,10 +47,17 @@ namespace Polo.Shop.CustomerContext.Infrastructure.Persistence.CustomerAggregate
 
          ///این ارتباط باید در طرف customer اضافه شود زیرا در طرف Address 
          ///navigation وجود ندارد
-         builder.HasMany(c => c.Addresses)
+         builder.HasMany(c=>c.Addresses)
                .WithOne()
                .HasForeignKey(a => a.CustomerId)
                .OnDelete(DeleteBehavior.Cascade);
+
+         ///set address property getter to its field
+         builder.Metadata
+               .FindNavigation("Addresses")
+               .SetPropertyAccessMode(PropertyAccessMode.Field);
+               
+
 
          builder.Property(c => c.Score)
                .HasColumnType(SqlDbType.Int.ToString())
