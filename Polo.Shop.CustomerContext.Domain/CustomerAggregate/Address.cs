@@ -1,10 +1,11 @@
 ﻿using Polo.Framework.Domain;
 using Polo.Shop.CustomerContext.Domain.CustomerAggregate.Exceptions;
 using System;
+using System.Collections.Generic;
 
 namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
 {
-   public class Address : EntityBase
+   public class Address : ValueObject<Address>
    {
       private Address()
       { }
@@ -38,6 +39,15 @@ namespace Polo.Shop.CustomerContext.Domain.CustomerAggregate
             throw new PostalCodeRequiredException();
 
          PostalCode = postalCode;
+      }
+
+      protected override IEnumerable<object> GetAttributesToIncludeInEqualityCheck()
+      {
+         yield return this.PostalCode;
+         yield return this.AddressLine;
+         yield return this.CityId;
+         yield return this.Coordinate;
+
       }
    }
 }

@@ -11,9 +11,9 @@ namespace Polo.Framework.Persistence
 
       protected override void OnModelCreating(ModelBuilder modelBuilder)
       {
-         base.OnModelCreating(modelBuilder);
-
          DetectEntityMappings(modelBuilder);
+
+         base.OnModelCreating(modelBuilder);
       }
       protected abstract void DetectEntityMappings(ModelBuilder modelBuilder);
 

@@ -2,13 +2,10 @@
 using Polo.Shop.CustomerContext.ApplicationService.Contracts.CustomerAggregate;
 using Polo.Shop.CustomerContext.Domain.CustomerAggregate;
 using Polo.Shop.CustomerContext.Domain.CustomerAggregate.Services;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace Polo.Shop.CustomerContext.AppliactionService.CustomerAggregste
 {
-   
+
    class AddAddressCommandHandler : ICommandHandler<AddAddressCommand>
    {
       private readonly ICustomerRepository _customerRepository;
