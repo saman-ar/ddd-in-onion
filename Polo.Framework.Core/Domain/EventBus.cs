@@ -27,7 +27,7 @@ namespace Polo.Framework.Core.Domain
          {
             foreach (var handler in existingEvent.Handlers)
             {
-               handler.Action(domainEvent);
+               handler(domainEvent);
             }
          }
       }
@@ -39,15 +39,14 @@ namespace Polo.Framework.Core.Domain
          if (existingEvent == null)
          {
             var newSubscription = new EventSubscriptionItem();
-            newSubscription.Handlers.Add(new EventHandler(action));
+            newSubscription.Handlers.Add(action);
             newSubscription.EventType = typeof(TEvent);
-            // Handlers = new List<EventHandler>() { new EventHandler(action) }
 
             subscriptionList.Add(newSubscription);
          }
          else
          {
-            existingEvent.Handlers.Add(new EventHandler(action));
+            existingEvent.Handlers.Add(action);
          }
       }
 

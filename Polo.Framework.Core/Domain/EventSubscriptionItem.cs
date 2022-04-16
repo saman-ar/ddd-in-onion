@@ -9,21 +9,21 @@ namespace Polo.Framework.Core.Domain
    {
       public EventSubscriptionItem()
       {
-         Handlers = new List<EventHandler>();
+         Handlers = new List<Action<dynamic>>();
       }
 
       public Type EventType { get; set; }
-      public IList<EventHandler> Handlers { get; set; }
+      public IList<Action<dynamic>> Handlers { get; set; }
    }
 
-   public class EventHandler
-   {
-      private readonly Action<object> _handlingAction;
-      public EventHandler(Action<object> handlingAction)
-      {
-         _handlingAction = handlingAction;
-      }
+   //public class EventHandler
+   //{
+   //   private readonly Action<object> _handlingAction;
+   //   public EventHandler(Action<object> handlingAction)
+   //   {
+   //      _handlingAction = handlingAction;
+   //   }
 
-      public Action<object> Action => _handlingAction;
-   }
+   //   public Action<object> Action => _handlingAction;
+   //}
 }
