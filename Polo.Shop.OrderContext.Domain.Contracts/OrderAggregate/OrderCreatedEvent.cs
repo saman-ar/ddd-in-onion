@@ -1,10 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
+﻿using Polo.Framework.Core.Domain;
+using System;
 
 namespace Polo.Shop.OrderContext.Domain.Contracts.OrderAggregate
 {
-   public class OrderCreatedEvent
+   public class OrderCreatedEvent :IEvent
    {
       public OrderCreatedEvent(Guid OrderId, int customerScore)
       {
