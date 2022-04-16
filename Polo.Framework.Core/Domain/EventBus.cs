@@ -16,7 +16,7 @@ namespace Polo.Framework.Core.Domain
       }
 
 
-      public void Publish<TEvent>(TEvent domainEvent)
+      public void Publish<TEvent>(TEvent domainEvent) where TEvent : IEvent
       {
          ///refactored
          //subscriptionList.SingleOrDefault(l => l.EventType == typeof(TEvent)).Handlers.ForEach(h => h.Action(domainEvent));
@@ -25,14 +25,14 @@ namespace Polo.Framework.Core.Domain
          var existingEvent = FindExistingType<TEvent>();
          if (existingEvent != null)
          {
-            foreach (var handler in existingEvent.Handlers)
+            foreach (var doAction in existingEvent.Handlers)
             {
-               handler(domainEvent);
+               doAction(domainEvent);
             }
          }
       }
 
-      public void Subscribe<TEvent>(Action<dynamic> action)
+      public void Subscribe<TEvent>(Action<IEvent> action) where TEvent : IEvent
       {
          var existingEvent = FindExistingType<TEvent>();
 
